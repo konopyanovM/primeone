@@ -1,0 +1,291 @@
+// * Media *
+
+$md1: 600px;
+$md2: 768px; // Tablets and mobile
+$md3: 992px;
+$md4: 1200px;
+
+// Header
+
+.header {
+   padding: 29px 0px 33px;
+   @media (max-width: $md1) {
+      margin-bottom: 50px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      display: flex;
+      margin-bottom: 60px;
+   }
+}
+.header__burger {
+   display: none;
+   @media (max-width: $md1) {
+      display: flex;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      display: flex;
+   }
+}
+.container {
+}
+.header-top {
+   display: flex;
+   justify-content: space-between;
+   @media (max-width: $md1) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+   }
+}
+.header-top-lang {
+   display: flex;
+}
+.header-top-lang__item {
+   margin-right: 12px;
+   @media (max-width: $md1) {
+      margin-right: 6px;
+   }
+}
+.header-top-lang__item:last-child {
+   margin-right: 0px;
+}
+.header-top-lang__link {
+   padding: 4px 4px;
+   font-family: "Bebas Neue", cursive;
+   font-size: 10px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+.header-top-lang__link.active {
+   color: white;
+   background-color: black;
+}
+.header-top__link {
+   font-family: "Akzidenz-Grotesk";
+   font-size: 15px;
+   text-align: left;
+   text-transform: uppercase;
+   @media (max-width: $md1) {
+      font-size: 12px;
+   }
+}
+
+// --------Header bottom
+
+.header-bottom {
+   margin-top: -20px;
+   display: flex;
+   align-items: center;
+   transition: all 0.5s ease;
+   @media (max-width: $md1) {
+      height: 75vh;
+      display: block;
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 10vw;
+      margin-top: -200%;
+      overflow: scroll;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      height: 75vh;
+      display: block;
+      padding-left: 12vw;
+      flex-direction: column;
+      align-items: baseline;
+
+      margin-top: -100%;
+      overflow: scroll;
+   }
+   &.active {
+      @media (max-width: $md1) {
+         margin-top: 0;
+      }
+
+      @media (min-width: $md1) and (max-width: $md2) {
+         margin-top: 0;
+      }
+   }
+}
+
+.header-bottom::before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: -100%;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   background-color: grey;
+   transition: all 0.5s ease;
+   @media (min-width: $md2) and (max-width: $md3) {
+      display: none;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      display: none;
+   }
+}
+.header-bottom.active::before {
+   top: 0px;
+}
+.header-bottom__column {
+   flex: 0 0 33.333%;
+}
+.header-bottom-menu {
+   @media (max-width: $md1) {
+      overflow: scroll;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      overflow: scroll;
+   }
+}
+.header-bottom-menu-list {
+   display: flex;
+   @media (max-width: $md1) {
+      flex-direction: column;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      flex-direction: column;
+   }
+}
+.header-bottom-menu-list_right {
+   justify-content: flex-end;
+}
+.header-bottom-menu-list > li {
+   margin-right: 46px;
+
+   @media (max-width: $md1) {
+      margin-right: 0px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin-right: 0px;
+   }
+
+   @media (min-width: $md2) and (max-width: $md3) {
+      margin-right: 10px;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      margin-right: 25px;
+   }
+}
+.header-bottom-menu-list > li:last-child {
+   margin-right: 0px;
+}
+.header-bottom-menu-list > li {
+   @media (max-width: $md1) {
+      margin-bottom: 12px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin-bottom: 20px;
+   }
+}
+.header-bottom-menu-list__link {
+   font-family: "Akzidenz-Grotesk";
+   font-size: 15px;
+   line-height: 25px;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+
+   @media (max-width: $md1) {
+      font-size: 16px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 21px;
+   }
+
+   @media (min-width: $md2) and (max-width: $md3) {
+      font-size: 12px;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      font-size: 13px;
+   }
+}
+
+// -------------------Header logo-----------------------
+.header-logo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   @media (max-width: $md1) {
+      margin-left: -106px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin-left: -106px;
+   }
+}
+.header-bottom__column:nth-child(2) {
+   @media (max-width: $md1) {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin-right: -106px;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+   }
+}
+.header-logo__text {
+   font-family: "Bebas Neue", cursive;
+   font-size: 10px;
+   text-transform: uppercase;
+   letter-spacing: 8px;
+   @media (max-width: $md1) {
+      font-size: 6px;
+      letter-spacing: 5px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 7px;
+      letter-spacing: 5px;
+   }
+
+   @media (min-width: $md2) and (max-width: $md3) {
+      font-size: 8px;
+      letter-spacing: 6px;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      font-size: 9px;
+      letter-spacing: 7px;
+   }
+}
+.header-logo__image {
+   width: 100%;
+}
+.header-logo__image > img {
+   display: block;
+   margin: 0 auto;
+   @media (max-width: $md1) {
+      max-width: 60%;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      max-width: 70%;
+   }
+
+   @media (min-width: $md2) and (max-width: $md3) {
+      max-width: 80%;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      max-width: 90%;
+   }
+}

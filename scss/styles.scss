@@ -1,0 +1,557 @@
+// * Imports *
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap");
+
+@import "_burger.scss";
+
+@import "_header.scss";
+
+// font-family: 'Bebas Neue', cursive;
+// * Connected fonts *
+@font-face {
+   font-family: "Akzidenz-Grotesk";
+   src: local("Akzidenz-Grotesk BQ Bold Condensed"), local("Akzidenz-Grotesk-BQ-Bold-Condensed"),
+      url("../fonts/AkzidenzGroteskBQ-BdCnd.woff2") format("woff2"),
+      url("../fonts/AkzidenzGroteskBQ-BdCnd.woff") format("woff"),
+      url("../fonts/AkzidenzGroteskBQ-BdCnd.ttf") format("truetype");
+   font-weight: 700;
+   font-style: normal;
+}
+
+// * Default font *
+
+body {
+   font-family: "PT Sans", sans-serif;
+}
+
+// * Media *
+
+$md1: 600px;
+$md2: 768px; // Tablets and mobile
+$md3: 992px;
+$md4: 1200px;
+
+// * Container *
+.container {
+   width: 100%;
+   max-width: 880px;
+   margin: 0px auto;
+   @media (max-width: $md1) {
+      max-width: 95vw;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      max-width: 95vw;
+   }
+
+   @media (min-width: $md2) and (max-width: $md3) {
+      max-width: $md1;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      max-width: $md2;
+   }
+}
+
+body.lock {
+   overflow: hidden;
+}
+
+// =============================BODY==============================
+
+// ----------------------------SECTION_1------------------------------
+
+.private {
+   min-height: 425px;
+   display: flex;
+   overflow: hidden;
+   @media (max-width: $md1) {
+      max-height: 100%;
+      flex-direction: column;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      max-height: 100%;
+      flex-direction: column;
+   }
+}
+.private__column {
+   flex: 0 0 50%;
+}
+.private__image {
+   height: 100%;
+   background: url(../img/block_1/01.jpg) no-repeat center/cover;
+   @media (max-width: $md1) {
+      min-height: 175px;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      min-height: 225px;
+   }
+}
+.private__image > img {
+   display: none;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.private-body {
+   height: 100%;
+   padding: 82px 270px 75px 59px;
+   background-color: black;
+   @media (max-width: $md1) {
+      padding: 82px 82px 75px 59px;
+   }
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding: 82px 170px 75px 59px;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      padding: 82px 60px 75px 59px;
+   }
+   @media (min-width: $md3) and (max-width: $md4) {
+      padding: 82px 170px 75px 59px;
+   }
+}
+.private-body__title {
+   color: #ffffff;
+   font-family: "Akzidenz-Grotesk";
+   font-size: 50px;
+   line-height: 50px;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   margin-bottom: 25px;
+   @media (max-width: $md1) {
+      font-size: 35px;
+      line-height: 35px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 35px;
+      line-height: 45px;
+   }
+}
+.private-body__text {
+   margin-bottom: 50px;
+   color: #ffffff;
+   font-size: 15px;
+   line-height: 25px;
+   @media (max-width: $md1) {
+      font-size: 25px;
+      line-height: 25px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 20px;
+      line-height: 20px;
+   }
+}
+.private-body-buttons {
+}
+.private-body-buttons__item {
+   margin-right: 14px;
+}
+.button {
+   display: inline-block !important;
+   padding: 16px 34px;
+   font-family: "Bebas Neue", cursive;
+   font-size: 18px !important;
+   text-transform: uppercase;
+   letter-spacing: 1.9px !important;
+   color: #ffffff !important;
+   background-color: #000 !important;
+   &_white {
+      color: black !important;
+      background-color: white !important;
+   }
+}
+.private-body-buttons__link {
+   @media (max-width: $md1) {
+      padding: 16px 34px 0px;
+      display: inline-block;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding: 16px 34px;
+      display: inline-block;
+   }
+}
+.link {
+   display: inline-block;
+   color: #fffffe;
+   font-family: "Bebas Neue", cursive;
+   font-size: 18px;
+   text-decoration: underline;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   &_black {
+      color: black;
+   }
+}
+
+// ----------------------------SECTION_2------------------------------
+
+.section {
+}
+.products {
+}
+.products-body {
+   max-width: 880px;
+   margin: 0 auto;
+   padding: 75px 0px 79px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.products__card {
+   max-width: 220px;
+   padding-bottom: 30px;
+
+   display: flex;
+   flex-direction: column;
+}
+.products__card-image {
+}
+.products__card-title {
+   max-width: 175px;
+   padding: 15px 80px 27px 6px;
+   color: #000000;
+   font-family: "Akzidenz-Grotesk";
+   font-size: 25px;
+   line-height: 25px;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+}
+.products__card-text {
+   flex: 1 1 auto;
+   max-width: 175px;
+   padding: 0px 0px 32px 3px;
+   color: #000000;
+   font-size: 15px;
+   line-height: 25px;
+}
+.products-card__button {
+   align-self: baseline;
+}
+.products-card__link {
+   margin-top: 29px;
+}
+
+// ----------------------------SECTION_3------------------------------
+
+.section {
+}
+.props {
+   background-color: #ebebeb;
+}
+.props-header {
+   display: flex;
+   min-height: 150px;
+}
+.props-title {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+   flex: 0 0 50%;
+   color: #fff;
+   background-color: #000;
+   font-family: "Akzidenz-Grotesk";
+   font-size: 50px;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   @media (max-width: $md1) {
+      font-size: 30px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      font-size: 40px;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      font-size: 40px;
+   }
+
+   @media (min-width: $md3) and (max-width: $md4) {
+      font-size: 40px;
+   }
+   > span {
+      max-width: 440px;
+      margin-right: 61px;
+      display: inline-block;
+      @media (max-width: $md1) {
+         margin-right: 10px;
+         padding-left: 10px;
+      }
+
+      @media (min-width: $md1) and (max-width: $md2) {
+         margin-right: 40px;
+         padding-left: 10px;
+      }
+   }
+}
+
+.props-image {
+   max-height: 100%;
+   width: 100%;
+   flex: 0 0 50%;
+   background: url(../img/block_3/01.jpg) center/cover no-repeat;
+}
+.props-body {
+   max-width: 880px;
+   margin: 0 auto;
+   padding-top: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.props-item {
+   min-width: 410px;
+   max-height: 100px;
+   margin-bottom: 50px;
+   display: flex;
+   flex: 0 0 50%;
+   @media (max-width: $md1) {
+      min-width: 250px;
+   }
+}
+.props-item__image {
+   @media (max-width: $md1) {
+      max-width: 80%;
+   }
+}
+.props-item__text-block {
+   padding: 4px 0px 3px 12px;
+}
+.props-item__title {
+   margin-bottom: 18px;
+   color: #000000;
+   font-family: "Akzidenz-Grotesk";
+   font-size: 25px;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   @media (max-width: $md1) {
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+      font-size: 20px;
+   }
+}
+.props-item__text {
+   color: #000000;
+   font-size: 15px;
+}
+
+// ----------------------------SECTION_4------------------------------
+
+.section {
+}
+.contact {
+}
+.contact__body {
+   max-width: 630px;
+   padding: 82px 0px 24px;
+   margin: 0 auto;
+   @media (max-width: $md1) {
+      padding: 82px 10px 24px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      padding: 82px 20px 24px;
+   }
+}
+.contact__title {
+   color: #000000;
+   font-family: "Akzidenz-Grotesk";
+   font-size: 50px;
+   line-height: 25px;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+}
+.contact-requisites {
+   padding-top: 39px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.contact-requisites__item {
+   margin-bottom: 23px;
+   display: flex;
+   align-items: center;
+   flex: 0 0 66%;
+   color: #000000;
+   font-size: 15px;
+   > img {
+      margin-right: 10px;
+   }
+   > span {
+   }
+}
+.contact-requisites__item_right {
+   flex: 0 0 34%;
+   justify-content: flex-end;
+}
+.socials {
+   flex: 0 0 34%;
+   display: flex;
+   justify-content: space-between;
+   @media (max-width: $md1) {
+      min-width: 150px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      min-width: 180px;
+   }
+}
+.socials__item {
+   > img {
+   }
+}
+.socials__link {
+}
+
+// ----------------------------SECTION_4------------------------------
+
+.section {
+}
+.message {
+   max-height: 475px;
+   display: flex;
+}
+.message__column {
+   flex: 0 0 50%;
+   background-color: #000;
+   @media (max-width: $md1) {
+      flex-basis: 100%;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      flex-basis: 100%;
+   }
+
+   &:first-child {
+      @media (max-width: $md1) {
+         display: none;
+      }
+
+      @media (min-width: $md1) and (max-width: $md2) {
+         display: none;
+      }
+   }
+}
+.message-map {
+   height: 100%;
+   background-color: #fff;
+   box-sizing: border-box;
+   border: 5px solid grey;
+   > h2 {
+      color: #000;
+      font-family: "Akzidenz-Grotesk";
+      font-size: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      text-align: center;
+   }
+}
+
+.message-body {
+   margin: 54px 0px 50px 60px;
+   display: flex;
+   flex-direction: column;
+   @media (max-width: $md1) {
+      margin: 24px 20px 20px 20px;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      margin: 34px 30px 30px 30px;
+   }
+}
+.message-body__title {
+   margin-bottom: 28px;
+   color: #ffffff;
+   font-family: "Akzidenz-Grotesk";
+   font-size: 25px;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+}
+.message-form {
+   max-width: 450px;
+   display: flex;
+   flex-direction: column;
+   > input {
+      margin-bottom: 25px;
+      padding: 17px 0px 17px 18px;
+      background-color: #252525;
+      border: 3px solid #959595;
+      color: #959595;
+      font-size: 15px;
+      @media (max-width: $md1) {
+      }
+
+      @media (min-width: $md1) and (max-width: $md2) {
+      }
+   }
+   > textarea {
+      max-height: 60px;
+      margin-bottom: 25px;
+      padding: 17px 0px 17px 18px;
+      background-color: #252525;
+      border: 3px solid #959595;
+      color: #959595;
+      font-size: 15px;
+      resize: none;
+      overflow: hidden;
+   }
+   > input:last-child {
+      padding: 16px 22px;
+      max-width: 155px;
+      border: none;
+      cursor: pointer;
+   }
+}
+
+// ----------------------------FOOTER------------------------------
+
+.footer {
+}
+.footer__body {
+   margin: 0 auto;
+   padding: 34px 0 27px;
+   max-width: 870px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   @media (max-width: $md1) {
+      max-width: 500px;
+      justify-content: center;
+   }
+
+   @media (min-width: $md1) and (max-width: $md2) {
+      justify-content: space-around;
+   }
+   @media (min-width: $md2) and (max-width: $md3) {
+      justify-content: space-around;
+   }
+}
+.footer__copy {
+   color: #4d4d4d;
+   font-size: 15px;
+   line-height: 25px;
+   > a {
+      text-decoration: underline;
+   }
+}
+.footer__image {
+}
+
+@media (max-width: $md1) {
+}
+
+@media (min-width: $md1) and (max-width: $md2) {
+}
+
+@media (min-width: $md2) and (max-width: $md3) {
+}
+
+@media (min-width: $md3) and (max-width: $md4) {
+}
+
+@media (min-width: $md4) {
+}
